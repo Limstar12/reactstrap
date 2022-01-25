@@ -22,30 +22,38 @@ class Navi extends Component{
 
 
     render(){
-        // console.logo('naviState :' +this.state.naviState);
         return(
-            <Navbar>
+            <Navbar className='d-flex  w-75'>
                 <NavbarBrand tag='h1'>
                     <a href='/'>
                         <img src={logo} style={{height : 80}}/>
                     </a>
                 </NavbarBrand>
-                {/* <NavbarToggler data-state={this.state.naviState} onClick={(e)=> this.toggle(e)} id = 'navToggler'></NavbarToggler> */}
                 <button data-state={this.state.naviState} onClick={(e)=> this.toggle(e)} id = 'navToggler' className= 'navbar-toggler d-block d-md-none' ></button>
-                <Nav data-open={this.state.naviState} className='d-none d-md-flex' id = 'gnb' >
-                    <NavItem>
-                        <NavLink href='#about'>
-                            나의 소개
+                <Nav data-open={this.state.naviState} className='d-none d-md-flex justify-content-between fw-bold w-75' id = 'gnb' >
+                    <NavItem className=''>
+                        <NavLink className='text-dark ' href='#about'>
+                            제품 소개
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href='#portfolio'>
-                            작품들
+                        <NavLink className='text-dark ' href='#portfolio'>
+                            정수기
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='scroll-page' href='#gallery'>
-                            면접제안
+                        <NavLink className='text-dark ' href='#gallery'>
+                            필터
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className='text-dark scroll=pag' href='#review'>
+                            이벤트
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className='text-dark  ' href='#gallery'>
+                            고객센터
                         </NavLink>
                     </NavItem>
                 </Nav>
